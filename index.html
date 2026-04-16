@@ -145,12 +145,12 @@ html_content_v2 = """
     </div>
 
     <div class="main-content">
-        <h2>Meine Bilder (1.png bis 6.png)</h2>
-        <p><i>Hinweis: Kopiere deine Bilder einfach in den gleichen Ordner wie diese HTML-Datei und benenne sie 1.png, 2.png usw.</i></p>
+        <h2>geleaktes zeug</h2>
+        <p><i>updates kommen</i></p>
         
         <div class="gallery">
             <div class="image-card">
-                <img src="1jpeg" alt="Bild 1 fehlt">
+                <img src="1.jpeg" alt="Bild 1 fehlt">
                 <div class="image-name">Hier Name 1</div>
             </div>
             <div class="image-card">
@@ -175,22 +175,8 @@ html_content_v2 = """
             </div>
         </div>
 
-        <div class="construction" style="color: red; font-weight: bold; font-size: 14pt;">
+        <div> class="construction" style="color: red; font-weight: bold; font-size: 14pt;">
             [SEITE NOCH IM AUFBAU]
         </div>
-    </div>
-
-    <div class="footer">
-        Beste Anzeige mit 800x600 Pixeln und High Color (16-Bit)
-    </div>
 </body>
 </html>
-"""
-
-# Speichern der HTML-Datei
-with open("benjamin_files_v2.html", "w", encoding="utf-8") as f:
-    f.write(html_content_v2)
-
-# PDF zur Vorschau erstellen
-from weasyprint import HTML
-HTML(string=html_content_v2).write_pdf("benjamin_files_v2.pdf")
