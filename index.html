@@ -1,0 +1,196 @@
+html_content_v2 = """
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Benjamins Home Page - Willkommen im Internet!</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 0;
+            background-color: #c0c0c0;
+        }
+        body {
+            background-color: #c0c0c0;
+            color: #000000;
+            font-family: "Times New Roman", Times, serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .marquee-container {
+            background-color: #000080;
+            color: #ffffff;
+            padding: 10px;
+            font-weight: bold;
+            text-align: center;
+            border: 4px outset #ffffff;
+            margin-bottom: 20px;
+            font-size: 14pt;
+        }
+        .header-title {
+            color: #ffff00;
+            background-color: #ff0000;
+            font-size: 36pt;
+            text-align: center;
+            margin: 10px 0;
+            padding: 10px;
+            border: 5px double #ffff00;
+            font-weight: bold;
+            font-style: italic;
+        }
+        .counter-box {
+            text-align: center;
+            margin: 15px 0;
+        }
+        .counter {
+            font-family: 'Courier New', Courier, monospace;
+            background: #000;
+            color: #0f0;
+            padding: 5px 15px;
+            border: 3px inset #888;
+            display: inline-block;
+            font-size: 14pt;
+        }
+        .sidebar {
+            width: 140px;
+            float: left;
+            border: 3px outset #eee;
+            padding: 10px;
+            background: #d0d0d0;
+            margin-right: 20px;
+        }
+        .sidebar a {
+            display: block;
+            color: blue;
+            margin-bottom: 15px;
+            font-weight: bold;
+            text-decoration: underline;
+            font-size: 12pt;
+        }
+        .main-content {
+            border: 3px inset #fff;
+            background: #ffffff;
+            padding: 20px;
+            min-height: 850px;
+            margin-left: 170px;
+        }
+        h2 {
+            color: #000080;
+            border-bottom: 3px ridge #ff0000;
+            padding-bottom: 5px;
+        }
+        .gallery {
+            text-align: center;
+        }
+        .image-card {
+            display: inline-block;
+            border: 3px outset #808080;
+            padding: 10px;
+            background: #e0e0e0;
+            text-align: center;
+            width: 180px;
+            margin: 15px;
+            vertical-align: top;
+        }
+        .image-card img {
+            width: 150px;
+            height: 150px;
+            border: 3px inset #fff;
+            background-color: #ccc;
+            display: block;
+            margin: 0 auto;
+        }
+        .image-name {
+            margin-top: 10px;
+            font-weight: bold;
+            background: #fff;
+            border: 1px solid #000;
+            padding: 4px;
+            font-family: Arial, sans-serif;
+            font-size: 10pt;
+        }
+        .construction {
+            text-align: center;
+            margin-top: 40px;
+        }
+        .footer {
+            clear: both;
+            text-align: center;
+            font-size: 9pt;
+            margin-top: 30px;
+            border-top: 2px solid #808080;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="marquee-container">
+        +++ WILLKOMMEN BEI DEN BENJAMIN FILES +++ AKTUALISIERT AM: 12.04.1999 +++
+    </div>
+
+    <div class="header-title">Benjamin files</div>
+
+    <div class="counter-box">
+        <div class="counter">Besucher Nr: 0001337</div>
+    </div>
+
+    <div class="sidebar">
+        <a href="#">HOME</a>
+        <a href="#">BILDER</a>
+        <a href="#">STUFF</a>
+        <a href="#">GÄSTEBUCH</a>
+        <div style="margin-top:30px;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b3/Netscape_Now.gif" alt="Netscape" style="width:80px;">
+        </div>
+    </div>
+
+    <div class="main-content">
+        <h2>Meine Bilder (1.png bis 6.png)</h2>
+        <p><i>Hinweis: Kopiere deine Bilder einfach in den gleichen Ordner wie diese HTML-Datei und benenne sie 1.png, 2.png usw.</i></p>
+        
+        <div class="gallery">
+            <div class="image-card">
+                <img src="1jpeg" alt="Bild 1 fehlt">
+                <div class="image-name">Hier Name 1</div>
+            </div>
+            <div class="image-card">
+                <img src="2.png" alt="Bild 2 fehlt">
+                <div class="image-name">Hier Name 2</div>
+            </div>
+            <div class="image-card">
+                <img src="3.png" alt="Bild 3 fehlt">
+                <div class="image-name">Hier Name 3</div>
+            </div>
+            <div class="image-card">
+                <img src="4.png" alt="Bild 4 fehlt">
+                <div class="image-name">Hier Name 4</div>
+            </div>
+            <div class="image-card">
+                <img src="5.png" alt="Bild 5 fehlt">
+                <div class="image-name">Hier Name 5</div>
+            </div>
+            <div class="image-card">
+                <img src="6.png" alt="Bild 6 fehlt">
+                <div class="image-name">Hier Name 6</div>
+            </div>
+        </div>
+
+        <div class="construction" style="color: red; font-weight: bold; font-size: 14pt;">
+            [SEITE NOCH IM AUFBAU]
+        </div>
+    </div>
+
+    <div class="footer">
+        Beste Anzeige mit 800x600 Pixeln und High Color (16-Bit)
+    </div>
+</body>
+</html>
+"""
+
+# Speichern der HTML-Datei
+with open("benjamin_files_v2.html", "w", encoding="utf-8") as f:
+    f.write(html_content_v2)
+
+# PDF zur Vorschau erstellen
+from weasyprint import HTML
+HTML(string=html_content_v2).write_pdf("benjamin_files_v2.pdf")
